@@ -11,7 +11,6 @@ interface PhotoUploadProps {
 
 export default function PhotoUpload({ onPhotosUploaded }: PhotoUploadProps) {
   const [photos, setPhotos] = useState<UploadedPhoto[]>([]);
-  const [dragActive, setDragActive] = useState(false);
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const newPhotos: UploadedPhoto[] = acceptedFiles.slice(0, 10 - photos.length).map((file) => ({
