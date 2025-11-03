@@ -1,4 +1,4 @@
-// Global type declarations for MemoryMagic AI
+// Global type declarations for Chapter AI
 
 declare global {
   interface Window {

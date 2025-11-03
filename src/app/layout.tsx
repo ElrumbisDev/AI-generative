@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MemoryMagic AI - Créez des vidéos magiques avec l'IA",
+  title: "Chapter AI - Créez des vidéos magiques avec l'IA",
   description: "Transformez vos plus beaux souvenirs de mariage ou de naissance en vidéos magiques grâce à l'intelligence artificielle. Upload jusqu'à 10 photos et laissez l'IA créer votre vidéo personnalisée.",
   keywords: "vidéo IA, mariage, naissance, souvenirs, intelligence artificielle, montage vidéo automatique",
-  authors: [{ name: "MemoryMagic AI" }],
-  creator: "MemoryMagic AI",
+  authors: [{ name: "Chapter AI" }],
+  creator: "Chapter AI",
   openGraph: {
-    title: "MemoryMagic AI - Créez des vidéos magiques avec l'IA",
+    title: "Chapter AI - Créez des vidéos magiques avec l'IA",
     description: "Transformez vos plus beaux souvenirs en vidéos magiques avec l'intelligence artificielle",
     url: "https://memorymagic-ai.vercel.app",
-    siteName: "MemoryMagic AI",
+    siteName: "Chapter AI",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MemoryMagic AI - Créez des vidéos magiques",
+        alt: "Chapter AI - Créez des vidéos magiques",
       },
     ],
     locale: "fr_FR",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MemoryMagic AI - Créez des vidéos magiques avec l'IA",
+    title: "Chapter AI - Créez des vidéos magiques avec l'IA",
     description: "Transformez vos plus beaux souvenirs en vidéos magiques avec l'intelligence artificielle",
     images: ["/og-image.jpg"],
   },

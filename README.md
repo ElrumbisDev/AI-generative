@@ -1,8 +1,8 @@
-# MemoryMagic AI ✨
+# Chapter AI ✨
 
 Une application web moderne qui transforme vos plus beaux souvenirs de mariage ou de naissance en vidéos magiques grâce à l'intelligence artificielle.
 
-![MemoryMagic AI](https://via.placeholder.com/800x400/FF6B6B/FFFFFF?text=MemoryMagic+AI)
+![Chapter AI](https://via.placeholder.com/800x400/FF6B6B/FFFFFF?text=Chapter+AI)
 
 ## 🌟 Fonctionnalités
 
@@ -194,9 +194,9 @@ Les contributions sont les bienvenues ! Consultez [CONTRIBUTING.md](CONTRIBUTING
 
 ## 📞 Support
 
-- 📧 Email : support@memorymagic-ai.com
+- 📧 Email : support@chapter-ai.com
 - 🐛 Issues : [GitHub Issues](https://github.com/ElrumbisDev/AI-generative/issues)
-- 💬 Discord : [Communauté MemoryMagic](https://discord.gg/memorymagic)
+- 💬 Discord : [Communauté Chapter AI](https://discord.gg/chapterai)
 
 ---
 
