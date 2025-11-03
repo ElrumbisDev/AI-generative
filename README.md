@@ -1,38 +1,203 @@
-# AI-generative
+# MemoryMagic AI ✨
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Une application web moderne qui transforme vos plus beaux souvenirs de mariage ou de naissance en vidéos magiques grâce à l'intelligence artificielle.
 
-## Getting Started
+![MemoryMagic AI](https://via.placeholder.com/800x400/FF6B6B/FFFFFF?text=MemoryMagic+AI)
 
-First, run the development server:
+## 🌟 Fonctionnalités
+
+- 📸 **Upload intelligent** : Jusqu'à 10 photos avec preview en temps réel
+- 🎭 **Événements spécialisés** : Mariages et naissances avec styles adaptés
+- 🎨 **Styles variés** : Romantique, Joyeux, Élégant, Ludique
+- 🤖 **IA de pointe** : Intégration avec RunwayML, Luma Dream Machine, Synthesia
+- 📱 **Responsive design** : Optimisé pour mobile et desktop
+- ✨ **Animations fluides** : Interface moderne avec Framer Motion
+- 🎥 **Export HD** : Vidéos en qualité 1080p format MP4
+
+## 🚀 Démarrage rapide
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Cloner le repository
+git clone https://github.com/ElrumbisDev/AI-generative.git
+cd ai-generative
+
+# Installer les dépendances
+npm install
+
+# Configurer les variables d'environnement
+cp .env.example .env.local
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Configuration des APIs
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Éditez le fichier `.env.local` et ajoutez vos clés API :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Choisissez votre fournisseur principal
+VIDEO_AI_PROVIDER=runway
 
-## Learn More
+# RunwayML (Recommandé)
+RUNWAY_API_KEY=your_runway_api_key_here
 
-To learn more about Next.js, take a look at the following resources:
+# Luma Dream Machine
+LUMA_API_KEY=your_luma_api_key_here
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Synthesia
+SYNTHESIA_API_KEY=your_synthesia_api_key_here
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Lancement
 
-## Deploy on Vercel
+```bash
+# Développement
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Production
+npm run build
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+
+## 🎯 APIs supportées
+
+### RunwayML (Recommandé)
+- **Avantages** : Excellente qualité, transitions fluides
+- **Inscription** : [runway.com](https://runway.com)
+- **Tarif** : Crédits par génération
+
+### Luma Dream Machine
+- **Avantages** : Bon rapport qualité/prix
+- **Inscription** : [lumalabs.ai](https://lumalabs.ai)
+- **Tarif** : Abonnement mensuel
+
+### Synthesia
+- **Avantages** : Spécialisé dans les avatars parlants
+- **Inscription** : [synthesia.io](https://synthesia.io)
+- **Tarif** : Abonnement professionnel
+
+## 📱 Utilisation
+
+1. **📸 Upload photos** : Glissez-déposez jusqu'à 10 photos de votre événement
+2. **🎨 Personnalisation** : Choisissez le type d'événement (mariage/naissance) et le style
+3. **✍️ Message** : Ajoutez votre message personnel qui apparaîtra dans la vidéo
+4. **🎬 Génération** : L'IA crée votre vidéo personnalisée
+5. **📥 Téléchargement** : Récupérez votre vidéo en HD
+
+## 🛠️ Technologies
+
+- **Framework** : Next.js 16 avec App Router
+- **Styling** : Tailwind CSS 4
+- **Animations** : Framer Motion
+- **Upload** : React Dropzone
+- **Icons** : Lucide React
+- **Deployment** : Vercel Ready
+
+## 🚀 Déploiement sur Vercel
+
+### Déploiement automatique
+
+1. **Connectez votre repository** :
+   - Allez sur [vercel.com](https://vercel.com)
+   - Cliquez sur "New Project"
+   - Importez votre repository GitHub
+
+2. **Configuration des variables d'environnement** :
+   ```
+   VIDEO_AI_PROVIDER=runway
+   RUNWAY_API_KEY=your_key_here
+   LUMA_API_KEY=your_key_here
+   SYNTHESIA_API_KEY=your_key_here
+   ```
+
+3. **Déploiement** : Vercel détecte automatiquement Next.js et déploie
+
+### Déploiement manuel
+
+```bash
+# Installer Vercel CLI
+npm i -g vercel
+
+# Déployer
+vercel
+
+# Production
+vercel --prod
+```
+
+## 🎨 Personnalisation
+
+### Ajouter un nouveau style
+
+```typescript
+// src/components/EventForm.tsx
+const styles = [
+  // ... styles existants
+  {
+    id: 'mystique',
+    label: 'Mystique',
+    description: 'Ambiance mystérieuse et envoûtante',
+    emoji: '🌙'
+  }
+];
+```
+
+### Ajouter un nouveau fournisseur d'IA
+
+```typescript
+// src/app/api/generate-video/route.ts
+const API_PROVIDERS = {
+  // ... fournisseurs existants
+  nouveau_fournisseur: {
+    name: 'Nouveau Fournisseur',
+    endpoint: 'https://api.nouveau-fournisseur.com/v1/generate',
+    headers: {
+      'Authorization': `Bearer ${process.env.NOUVEAU_API_KEY}`,
+      'Content-Type': 'application/json'
+    }
+  }
+};
+```
+
+## 🐛 Troubleshooting
+
+### Problèmes courants
+
+**Upload des photos ne fonctionne pas**
+```bash
+# Vérifiez les types MIME supportés
+# Augmentez la limite de taille si nécessaire
+```
+
+**API timeout**
+```bash
+# Vérifiez vos clés API
+# Assurez-vous d'avoir des crédits suffisants
+```
+
+**Erreur de build**
+```bash
+# Nettoyez le cache
+rm -rf .next
+npm run build
+```
+
+## 📄 Licence
+
+MIT License - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! Consultez [CONTRIBUTING.md](CONTRIBUTING.md) pour plus d'informations.
+
+## 📞 Support
+
+- 📧 Email : support@memorymagic-ai.com
+- 🐛 Issues : [GitHub Issues](https://github.com/ElrumbisDev/AI-generative/issues)
+- 💬 Discord : [Communauté MemoryMagic](https://discord.gg/memorymagic)
+
+---
+
+**Créé avec ❤️ pour immortaliser vos plus beaux moments**
