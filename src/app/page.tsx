@@ -211,7 +211,7 @@ export default function Home() {
                   </button>
                 </ScaleOnHover>
               </FadeInWhenVisible>
-            </div>
+            </AnimatedContainer>
           )}
 
           {currentStep === 4 && videoUrl && (
