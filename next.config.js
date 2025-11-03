@@ -8,7 +8,6 @@ const nextConfig = {
   
   // Build optimizations
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
   },
   

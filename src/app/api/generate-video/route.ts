@@ -41,18 +41,11 @@ export async function POST(request: NextRequest) {
       jobId
     });
 
-    if (videoResult.success) {
-      return NextResponse.json({
-        success: true,
-        videoUrl: videoResult.videoUrl,
-        jobId: videoResult.jobId
-      });
-    } else {
-      return NextResponse.json(
-        { success: false, error: videoResult.error },
-        { status: 500 }
-      );
-    }
+    return NextResponse.json({
+      success: true,
+      videoUrl: videoResult.videoUrl,
+      jobId: videoResult.jobId
+    });
 
   } catch (error) {
     console.error('Erreur lors de la génération de vidéo:', error);
